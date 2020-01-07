@@ -83,7 +83,7 @@
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         try {
-        
+
             window.FirebasePlugin.onTokenRefresh(function(fcmToken) {
                 console.log(fcmToken);
                 $scope.success(fcmToken);
