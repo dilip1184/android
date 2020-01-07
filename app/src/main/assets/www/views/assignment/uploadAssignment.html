@@ -1,0 +1,115 @@
+﻿<div ng-controller="uploadAssignmentController">
+ 
+    <div class="row">
+        <!-- begin col-2 -->
+        <!-- end col-2 -->
+        <!-- begin col-10 -->
+        <div class="col-lg-10">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-heading -->
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Upload Assignment</h4>
+                </div>
+                <!-- end panel-heading -->
+                <!-- begin panel-body -->
+                <div class="panel-body">
+                    <form method="POST" name="assignmentForm" class="margin-bottom-0" novalidate>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Class</label>
+                                    <select name="className" class="form-control input-sm" ng-required="true" ng-options="x as x.groupName for x in userGroups" title="Select Class" data-live-search="true"
+                                            ng-model="assignment.group" selectpicker="" selectpicker-options="userGroups" ng-change="getSubjects()">
+                                        <option value="" ng-show="false" />
+                                    </select>
+                                    <span class="label label-danger" ng-show="assignmentForm.className.$error.required && assignmentForm.className.$touched">Class is required.</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <select name="subject" class="form-control input-sm" ng-required="true" ng-options="x as x.subjectName for x in subjects" title="Select Subject" data-live-search="true"
+                                            ng-model="assignment.subject" selectpicker="" selectpicker-options="subjects" >
+                                        <option value="" ng-show="false" />
+                                    </select>
+                                    <span class="label label-danger" ng-show="assignmentForm.subject.$error.required && assignmentForm.subject.$touched">Subject is required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div>
+                                        <label>Assignment Date</label>
+                                    </div>
+                                    <input type="text" bootstrapdatepicker ng-model="assignment.assignmentDate" class="form-control" ng-readonly="true" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div>
+                                        <label>Deadline</label>
+                                    </div>
+                                    <input type="text" bootstrapdatepicker ng-model="assignment.deadline" class="form-control" ng-readonly="true" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" type="text" ng-model="assignment.description" class="form-control" ng-required="true"
+                                            ></textarea>
+                                  
+                                        <span class="label label-danger" ng-show="assignmentForm.description.$error.required && assignmentForm.description.$touched">Description is required.</span>
+                                     
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Student</label>
+                                    <select name="class" class="form-control input-sm" ng-options="x as x.fullName for x in students" title="Select Student" data-live-search="true"
+                                            ng-model="assignment.student" selectpicker="" selectpicker-options="students">
+                                        <option value="" ng-show="false" />
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="dropzone" options="dzOptions" callbacks="dzCallbacks" methods="dzMethods" ng-dropzone></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input ng-click="uploadAssignment(assignmentForm)" type="button" class="btn btn-success btn-block" value="Upload" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end panel-body -->
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-10 -->
+    </div>
+    <!-- end row -->
+</div>

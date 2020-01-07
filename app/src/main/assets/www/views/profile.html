@@ -1,0 +1,167 @@
+<div ng-controller="profileController">
+    <!-- begin profile -->
+	<div class="profile">
+		<div class="profile-header">
+			<!-- BEGIN profile-header-cover -->
+			<div class="profile-header-cover"></div>
+			<!-- END profile-header-cover -->
+			<!-- BEGIN profile-header-content -->
+			<div class="profile-header-content">
+				<!-- BEGIN profile-header-img -->
+				<div class="profile-header-img">
+					<img ng-src="{{teacher.photoPath}}" alt="">
+				</div>
+				<!-- END profile-header-img -->
+				<!-- BEGIN profile-header-info -->
+				<div class="profile-header-info">
+					<h4 class="m-t-10 m-b-5">{{teacher.fullName}}</h4>
+					<p class="m-b-10">Teacher</p>
+					<a href="#" class="btn btn-xs btn-yellow">Profile</a>
+				</div>
+				<!-- END profile-header-info -->
+			</div>
+			<!-- END profile-header-content -->
+			<!-- BEGIN profile-header-tab -->
+			<ul class="profile-header-tab nav nav-tabs">
+				<li class="nav-item"><a href="javascript:;" data-target="#profile-general" class="nav-link active" data-toggle="tab">GENERAL</a></li>
+				<li class="nav-item"><a href="javascript:;" data-target="#profile-other" class="nav-link" data-toggle="tab">OTHER</a></li>
+			
+			</ul>
+			<!-- END profile-header-tab -->
+		</div>
+	</div>
+	<!-- end profile -->
+	<!-- begin profile-content -->
+	<div class="profile-content">
+		<!-- begin tab-content -->
+        <div class="tab-content p-0">
+            <!-- begin #profile-post tab -->
+            <div class="tab-pane fade show active" id="profile-general">
+                <div class="table-responsive">
+                    <table class="table table-profile">
+                        <thead>
+                            <tr>
+
+                                <th colspan="2">
+                                    <h4>{{teacher.firstName}} {{teacher.middleName}} {{teacher.lastName}}<small>{{teacher.groupName}}</small></h4>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="field">Father Name</td>
+                                <td>{{teacher.fatherName}}
+                            </tr>
+                            <tr>
+                                <td class="field">Mother Name</td>
+                                <td>{{teacher.motherName}} </td>
+                            </tr>
+
+                            <tr class="divider">
+                                <td colspan="2"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="field">Department Name</td>
+                                <td>{{teacher.departmentName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Date Of Joining</td>
+                                <td>{{teacher.dateOfJoining.replace('/Date(', '').replace(')/', '') | date :"dd MMM, yyyy"}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="field">Date Of Birth</td>
+                                <td>{{teacher.dateOfBirth.replace('/Date(', '').replace(')/', '') | date :"dd MMM, yyyy"}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Aadhar No</td>
+                                <td>{{teacher.aadharNo}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Phone Number</td>
+                                <td>{{teacher.phoneNumber}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Email Id</td>
+                                <td>{{teacher.emailId}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Qualification</td>
+                                <td>{{teacher.qualification}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Job Title Name</td>
+                                <td>{{teacher.jobTitleName}}</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end #profile-post tab -->
+            <!-- begin #profile-about tab -->
+            <div class="tab-pane fade in" id="profile-other">
+                <!-- begin table -->
+                <div class="table-responsive">
+                    <table class="table table-profile">
+                        <thead>
+                            <tr>
+
+                                <th colspan="2">
+                                    <h4>{{teacher.firstName}} {{teacher.middleName}} {{teacher.lastName}}<small>{{teacher.groupName}}</small></h4>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="field">Adress</td>
+                                <td>{{teacher.addressLine1}} </td>
+                            </tr>
+                            <tr>
+                                <td class="field">City</td>
+                                <td>{{teacher.city}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Pin Code</td>
+                                <td>{{teacher.pinCode}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="field">Employee Category Name</td>
+                                <td>{{teacher.employeeCategoryName}} </td>
+                            </tr>
+
+                            <tr>
+                                <td class="field">Other Phone Number</td>
+                                <td>{{teacher.altPhoneNumber}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Blood Group</td>
+                                <td>{{teacher.bloodGroupName}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="field">Spouse Name</td>
+                                <td>{{student.spouseName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="field">Nationality</td>
+                                <td>{{teacher.nationalityName}}</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end table -->
+            </div>
+
+        </div>
+		<!-- end tab-content -->
+	</div>
+	<!-- end profile-content -->
+</div>

@@ -1,0 +1,92 @@
+<!-- begin #header -->
+<div id="header" class="header navbar-default" ng-controller="headerController">
+	<!-- begin navbar-header -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle pull-left" data-click="sidebar-toggled" ng-if="setting.layout.pageTwoSidebar === true">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<button type="button" class="navbar-toggle pull-right" data-click="right-sidebar-toggled" ng-if="setting.layout.pageTwoSidebar === true">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a ui-sref="app.dashboard" class="navbar-brand"> <b>{{schoolName}}</b> </a>
+		<button type="button" class="navbar-toggle" data-click="sidebar-toggled" ng-if="!setting.layout.pageTwoSidebar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<!-- end navbar-header -->
+	
+	
+	
+	<!-- begin header-nav -->
+    <ul class="navbar-nav navbar-right">
+        <li>
+            <div class="m-t-10 pull-right m-r-10">
+                <div class="form-group btn-group btn-group-toggle" data-toggle="buttons">
+                    <label ng-class="userView=='1'?'btn btn-outline-primary btn-sm active': 'btn btn-outline-primary btn-sm'" ng-click="setUserView('1')">
+                        <input type="radio" name="radioByGroup" ng-value="1" ng-model="userView"> My View.
+                    </label>
+                    <label ng-class="userView=='2'?'btn btn-outline-primary btn-sm active': 'btn btn-outline-primary btn-sm'"  ng-click="setUserView('2')">
+                        <input type="radio" name="radioByGroup" ng-value="2" ng-model="userView"> Student
+                    </label>
+                </div>
+                </div>
+        </li>
+        <li>
+           
+                <div class="m-t-10 pull-right">
+                    <select ng-options="c.text  for c in academicYears  track by c.value" ng-model="selectedAcademicYear.activeAcademicYear" name="academicYear" selectpickersmall="" selectpicker-options="academicYears" class="form-control input-sm"
+                            ng-change="changeAcademicYear(selectedAcademicYear.activeAcademicYear)">
+                       
+                    </select>
+                 
+               
+</div>
+		
+		</li>
+		<!--<li class="dropdown">
+			<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+				<i class="fa fa-bell"></i>
+                <span class="label">{{academicYears.length}}</span>
+			</a>
+			<ul class="dropdown-menu media-list dropdown-menu-right">
+                <li class="dropdown-header">SESSIONS ({{academicYears.length}})</li>
+				<li class="media" ng-repeat="a in academicYears">
+					<a href="javascript:;" ng-click="changeAcademicYear($event, a.value)">
+						
+						<div class="media-body">
+							<h6 class="media-heading">{{a.text}} </h6>
+							
+						</div>
+					</a>
+				</li>
+			
+			</ul>
+		</li>-->
+		<li class="dropdown navbar-user">
+			<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+				<img ng-src="{{teacher.photoPath}}" alt="" /> 
+                <span class="d-none d-md-inline">{{teacher.fullName}}</span> <b class="caret"></b>
+			</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a ui-sref="app.profile" href="javascript:;" class="dropdown-item">My Profile</a>
+				<a ui-sref="app.changePassword" href="javascript:;" class="dropdown-item">Change Password</a>
+				<div class="dropdown-divider"></div>
+				<a href="javascript:;" class="dropdown-item" ng-click="logOut()">Log Out</a>
+			</div>
+		</li>
+		<li class="divider d-none d-md-block" ng-if="setting.layout.pageTwoSidebar === true"></li>
+		<li class="d-none d-md-block" ng-if="setting.layout.pageTwoSidebar === true">
+			<a href="javascript:;" data-click="right-sidebar-toggled" class="f-s-14">
+				<i class="fa fa-th"></i>
+			</a>
+		</li>
+	</ul>
+	<!-- end header navigation right -->
+</div>
+<!-- end #header -->

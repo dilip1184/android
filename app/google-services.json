@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "850313217743",
+    "firebase_url": "https://api-project-850313217743.firebaseio.com",
+    "project_id": "api-project-850313217743",
+    "storage_bucket": "api-project-850313217743.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850313217743:android:04ec32a9dad68b1b",
+        "android_client_info": {
+          "package_name": "smartlogic.smartgps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850313217743-s4tt5vrfohmkiiteav39ska5bpdnshdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJM8MFWas8vmYsdph8B5XH0D4hv_xtmvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850313217743-s4tt5vrfohmkiiteav39ska5bpdnshdf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850313217743:android:1d47456ce6ca6498a319ba",
+        "android_client_info": {
+          "package_name": "smartlogic.xavier.teacherapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850313217743-s4tt5vrfohmkiiteav39ska5bpdnshdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJM8MFWas8vmYsdph8B5XH0D4hv_xtmvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850313217743-s4tt5vrfohmkiiteav39ska5bpdnshdf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

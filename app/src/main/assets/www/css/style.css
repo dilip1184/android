@@ -1,0 +1,143 @@
+﻿
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+ng\:form {
+    display: block;
+}
+
+.ng-animate-shim {
+    visibility: hidden;
+}
+
+.ng-anchor {
+    position: absolute;
+}
+.td-small {
+    width: 1%;
+ 
+}
+.card-header {
+    padding: 5px 5px !important;
+    margin-top: 0;
+    border-bottom: 1px solid #f2f3f4;
+    font-weight:normal;
+}
+.content {
+    padding: 10px 5px;
+}
+.panel-body {
+    padding: 5px;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: inherit;
+    opacity: inherit;
+}
+.dropdown-menu {
+    z-index: 9999;
+}
+.tooltip.tooltip-pink .tooltip-inner {
+    background-color: #FF0000 !important;
+    color: #fff !important;
+}
+
+.tooltip.tooltip-pink .tooltip-arrow {
+    border-top-color: #FF0000 !important;
+}
+.tooltip {
+    visibility: visible;
+    top: 42px;
+    left: 150px;
+}
+.loading-box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 100000;
+}
+.l-h-w {
+    height: 70px;
+    width: 70px;
+    top: 45%;
+    left: 47.5%;
+}
+.loader-new {
+    position: absolute;
+    top: 47%;
+    left: 49%;
+    z-index: 999;
+    height: 30px;
+    width: 30px;
+    border: 3px solid #dbdbdb;
+    border-right-color: #58A2EC;
+    border-top-color: #58A2EC;
+    border-radius: 100%;
+    -webkit-animation: spin 1500ms infinite linear;
+    animation: spin 1500ms infinite linear;
+}
+.nav
+{
+    font-weight:600 !important;
+}
+
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    position: static;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.login-background {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.brand {
+    /*color: #E73614 !important*/
+    color: white !important
+}
+
+.login.login-v2 label {
+    color: white;
+}
+/*.login.login-v2 .form-control {
+    background: #d9e0e7;
+    border: 1px solid transparent;
+    color: #000;
+}*/
+.login.login-v2 .login-header .brand small {
+    color: white;
+    font-weight: bold;
+}
+
+.header.navbar-default .brand, .header.navbar-default .navbar-brand {
+    color: #E73614;
+}
+
+.profile-header .profile-header-cover {
+    background-image: url(../images/profile/sunbeam-academy.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

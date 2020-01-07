@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: *; connect-src *" />
+
+    <meta charset="utf-8" />
+    <title data-ng-bind="'School ERP | ' + $state.current.data.pageTitle">School ERP</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="assets/plugins/animate/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/default/style.min.css" rel="stylesheet" />
+    <link href="assets/css/default/style-responsive.min.css" rel="stylesheet" />
+    <link href="assets/css/default/theme/default.css" rel="stylesheet" id="theme" />
+    <link href="assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" id="theme" />
+    <link href="assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" id="theme" />
+
+    <link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" id="theme" />
+    <link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" id="theme" />
+
+    <link href="assets/plugins/bootstrap-combobox/css/bootstrap-combobox.css" rel="stylesheet" id="theme" />
+    <link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" id="theme" />
+
+    <link href="assets/plugins/dropzone/min/dropzone.min.css" rel="stylesheet" id="theme" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN BASE ANGULAR JS ================== -->
+    <!-- ================== END PAGE LEVEL JS ================== -->
+    <!-- ================== END BASE ANGULAR JS ================== -->
+    <base href="./">
+</head>
+<body ng-app="colorAdminApp" ng-controller="appController" ng-cloak ng-class="{'pace-top': setting.layout.paceTop, 'boxed-layout': setting.layout.pageBoxedLayout, 'bg-white': setting.layout.pageBgWhite }">
+    <!--<body ng-controller="appController" ng-cloak ng-class="{'pace-top': setting.layout.paceTop, 'boxed-layout': setting.layout.pageBoxedLayout, 'bg-white': setting.layout.pageBgWhite }">-->
+    <div class="loading-box" id="spinner" role="dialog" style="display:none">
+        <div class="loader-new l-h-w"></div>
+    </div>
+    <!-- begin #page-loader -->
+    <div id="page-loader" ng-controller="pageLoaderController" class="fade in"><span class="spinner"></span></div>
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="page-container page-sidebar-fixed page-header-fixed fade"
+         ng-class="{
+	        'page-sidebar-minified': setting.layout.pageSidebarMinified,
+	        'page-content-full-height': setting.layout.pageContentFullHeight,
+	        'page-footer-fixed': setting.layout.pageFixedFooter,
+	        'page-with-right-sidebar': setting.layout.pageRightSidebar,
+	        'page-sidebar-minified': setting.layout.pageSidebarMinified,
+	        'page-with-two-sidebar': setting.layout.pageTwoSidebar,
+	        'page-right-sidebar-toggled': setting.layout.pageTwoSidebar,
+	        'page-with-top-menu': setting.layout.pageTopMenu,
+	        'page-without-sidebar': setting.layout.pageWithoutSidebar,
+	        'page-with-wide-sidebar': setting.layout.pageWideSidebar,
+	        'page-with-light-sidebar': setting.layout.pageLightSidebar,
+	        'p-t-0': setting.layout.pageWithoutHeader
+	    }">
+        <div ui-view></div>
+    </div>
+    <!-- end page container -->
+    <script>
+        Pace.on('start', function () {
+            $('#spinner').show();
+        });
+
+        Pace.on('done', function () {
+            $('#spinner').hide();
+        });
+    </script>
+
+    <script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/plugins/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/plugins/angularjs/angular.min.js"></script>
+    <script src="assets/plugins/angularjs/angular-animate.min.js"></script>
+    <script src="assets/plugins/angularjs/angular-touch.min.js"></script>
+    <script src="assets/plugins/angularjs/angular-ui-route.min.js"></script>
+    <script src="assets/plugins/bootstrap-angular-ui/ui-bootstrap-0.13.4.min.js"></script>
+    <script src="assets/plugins/bootstrap-angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+
+
+
+
+
+    <script src="assets/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/dropzone/min/dropzone.min.js"></script>
+    <script src="scripts/angular-datatables.js"></script>
+    <script src="scripts/angular-datatables.bootstrap.js"></script>
+    <script src="scripts/ng-dropzone.js"></script>
+   
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/theme/default.min.js"></script>
+    <script src="assets/js/apps.js"></script>
+
+    <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+    <script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+
+
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="assets/plugins/angularjs/ocLazyLoad.min.js"></script>
+
+    <script src="angular-app.js"></script>
+    <script src="angular-setting.js"></script>
+    <script src="angular-controller.js"></script>
+    <script src="angular-directive.js"></script>
+    <script src="controller/appController.js"></script>
+    <script src="controller/headerController.js"></script>
+    <script src="controller/sidebarController.js"></script>
+    <script src="controller/loginController.js"></script>
+    <script src="controller/dashboardController.js"></script>
+    <script src="controller/timeTableController.js"></script>
+    <script src="controller/alert/alertReportController.js"></script>
+    <script src="controller/attendance/attendanceAlertReportController.js"></script>
+    <script src="controller/attendance/attendanceInOutReportController.js"></script>
+    <script src="controller/attendance/studentListController.js"></script>
+    <script src="controller/attendance/studentDetailController.js"></script>
+    <script src="controller/attendance/attendanceReportController.js"></script>
+    <script src="controller/attendance/absentReportController.js"></script>
+    <script src="controller/attendance/attendanceMonthlyReportController.js"></script>
+    <script src="controller/attendance/holidayCalendarController.js"></script>
+    <script src="controller/notice/noticeController.js"></script>
+    <script src="controller/notice/sendNoticeController.js"></script>
+    <script src="controller/markAttendanceController.js"></script>
+    <script src="controller/profileController.js"></script>
+    <script src="controller/changePasswordController.js"></script>
+    <script src="controller/assignment/viewAssignmentController.js"></script>
+    <script src="controller/assignment/uploadAssignmentController.js"></script>
+    <script src="controller/help/helpRequestController.js"></script>
+    <script src="controller/attendance/student/studentAttendanceReportController.js"></script>
+    <script src="controller/attendance/student/studentAbsentReportController.js"></script>
+    <script src="controller/attendance/student/studentAttendanceAlertReportController.js"></script>
+    <script src="controller/attendance/student/studentAttendanceMonthlyReportController.js"></script>
+    <script src="controller/attendance/student/studentAttendanceInOutReportController.js"></script>
+    <script src="controller/attendance/student/studentHolidayCalendarController.js"></script>
+    <script src="controller/attendance/student/viewMonthlyReportController.js"></script>
+
+</body>
+</html>
