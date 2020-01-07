@@ -86,6 +86,7 @@
 
             window.FirebasePlugin.onTokenRefresh(function(fcmToken) {
                 console.log(fcmToken);
+                $scope.error("sbc");
                 $scope.success(fcmToken);
             }, function(error) {
                 console.error(error);
